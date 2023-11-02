@@ -17,28 +17,28 @@ sudo chown -R prometheus: /etc/prometheus /var/lib/prometheus
 sudo vi /etc/systemd/system/prometheus.service
 
 ## Enter the following content into the file:
-    [Unit]
-    Description=Prometheus
-    Wants=network-online.target
-    After=network-online.target
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
 
-    [Service]
-    User=prometheus
-    Group=prometheus
-    Type=simple
-    Restart=on-failure
-    RestartSec=5s
-    ExecStart=/usr/local/bin/prometheus \
-        --config.file /etc/prometheus/prometheus.yml \
-        --storage.tsdb.path /var/lib/prometheus/ \
-        --web.console.templates=/etc/prometheus/consoles \
-        --web.console.libraries=/etc/prometheus/console_libraries \
-        --web.listen-address=0.0.0.0:9090 \
-        --web.enable-lifecycle \
-        --log.level=info
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/bin/prometheus \
+    --config.file /etc/prometheus/prometheus.yml \
+    --storage.tsdb.path /var/lib/prometheus/ \
+    --web.console.templates=/etc/prometheus/consoles \
+    --web.console.libraries=/etc/prometheus/console_libraries \
+    --web.listen-address=0.0.0.0:9090 \
+    --web.enable-lifecycle \
+    --log.level=info
 
-    [Install]
-    WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
 ## Till above line only
 
 sudo systemctl daemon-reload

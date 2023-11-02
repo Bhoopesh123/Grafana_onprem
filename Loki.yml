@@ -60,19 +60,19 @@ table_manager:
 ## Till above line only
 
 ## Create Loki Service
-    sudo tee /etc/systemd/system/loki.service<<EOF
-    [Unit]
-    Description=Loki service
-    After=network.target
+sudo tee /etc/systemd/system/loki.service<<EOF
+[Unit]
+Description=Loki service
+After=network.target
 
-    [Service]
-    Type=simple
-    User=root
-    ExecStart=/usr/local/bin/loki -config.file /etc/loki-local-config.yaml
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/loki -config.file /etc/loki-local-config.yaml
 
-    [Install]
-    WantedBy=multi-user.target
-    EOF
+[Install]
+WantedBy=multi-user.target
+EOF
 ## Till above line only
 
 sudo systemctl daemon-reload
