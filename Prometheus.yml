@@ -39,6 +39,7 @@ sudo vi /etc/systemd/system/prometheus.service
 
     [Install]
     WantedBy=multi-user.target
+## Till above line only
 
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus
