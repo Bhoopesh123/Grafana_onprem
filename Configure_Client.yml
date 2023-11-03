@@ -3,7 +3,6 @@ sudo vi /etc/prometheus/prometheus.yml
 ## Enter the following content into the file:
 ...
   - job_name: "remote_collector"
-    scrape_interval: 10s
     static_configs:
       - targets: ["localhost:9100"]
 ## Till above line only
