@@ -85,3 +85,4 @@ Open the grafana.ini file and edit the following configuration parameters
     username: admin
     password: admin
 
+Change the password after first login
