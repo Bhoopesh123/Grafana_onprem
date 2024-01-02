@@ -1,4 +1,4 @@
-# Grafana_onprem  
+# Grafana over DNS  
 Install Grafana Stack on-prem on Ubuntu Box
     Reference Documentation: https://grafana.com/docs/grafana/latest/setup-grafana/installation/
 
