@@ -3,7 +3,7 @@ Install Grafana Stack on-prem on Ubuntu Box
 
     Reference Documentation: https://grafana.com/docs/grafana/latest/setup-grafana/installation/
 
-# 1. Install Prometheus on Ubuntu Monitoring Server:  
+# 1. Install Grafana on Ubuntu Server:  
 Install the prerequisite packages 
 
     sudo apt-get install -y apt-transport-https software-properties-common wget
