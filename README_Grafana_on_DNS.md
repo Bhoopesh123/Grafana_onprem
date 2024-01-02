@@ -78,3 +78,10 @@ Open the grafana.ini file and edit the following configuration parameters
     sudo systemctl restart grafana-server
     sudo systemctl status grafana-server
     journalctl -u grafana-server -f
+
+# 5. Access the grafana by below username and password:  
+
+    url: https://subdomain.mysite.com:3000
+    username: admin
+    password: admin
+
