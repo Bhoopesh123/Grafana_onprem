@@ -13,7 +13,7 @@ Access the Grafana web interface with default login and password
 http://localhost:3000
 
 login: admin
-password: password
+password: admin
 
 ## If admin password doesn't work then perform below steps:
 sudo apt-get install sqlite3
@@ -27,4 +27,5 @@ password: admin
 Add the Prometheus as a DataSource in Grafana.  
 
 To Search all of the time series data points grouping by job  in query
+
   count({__name__=~".+"}) by (job)
